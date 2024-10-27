@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rushikesh Kushare - Portfolio</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@300&display=swap" rel="stylesheet">
+    
     <style>
         /* Keyframe animations */
         @keyframes fadeIn {
@@ -11,98 +15,194 @@
             to { opacity: 1; transform: translateY(0); }
         }
 
-        @keyframes bounce {
-            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
-            40% { transform: translateY(-10px); }
-            60% { transform: translateY(-5px); }
-        }
-
-        /* Apply fadeIn animation to all sections */
-        section, header, footer {
+        /* Layout and color settings */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #f4f4f9;
             animation: fadeIn 1s ease-in-out;
         }
 
-        /* Hover animations */
-        a:hover {
-            background-color: #005fa3;
-            transform: scale(1.05);
-            transition: all 0.3s ease;
+        header, section, footer {
+            animation: fadeIn 1.5s ease-in-out;
+            padding: 2rem;
         }
 
-        .skill:hover, .project:hover {
-            transform: scale(1.05);
-            box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+        header {
+            background: linear-gradient(135deg, #007acc, #005fa3);
+            color: #fff;
+            text-align: left;
+            padding: 4rem 2rem;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        h2 {
+            color: #007acc;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        /* About Me Section */
+        #about {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 2rem;
+            background: #e0f4fc;
+        }
+
+        #about img {
+            width: 120px;
+            border-radius: 50%;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        #about img:hover {
+            transform: scale(1.1);
+        }
+
+        #about p {
+            max-width: 600px;
+            line-height: 1.6;
+        }
+
+        /* Skills Section */
+        #skills {
+            background: #f7fafc;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1.5rem;
+            padding-top: 1rem;
+        }
+
+        .skill {
+            padding: 1rem;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            width: 150px;
+            text-align: center;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .skill:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+            color: #007acc;
+        }
+
+        /* Projects Section */
+        #projects {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1.5rem;
+        }
+
+        .project {
+            width: 300px;
+            padding: 1.5rem;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+        }
+
+        .project:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+            color: #007acc;
+        }
+
+        /* Contact Section */
+        #contact {
+            background-color: #007acc;
+            color: #fff;
+            text-align: center;
+        }
+
+        #contact a {
+            color: #ffcc00;
+            text-decoration: underline;
+        }
+
+        /* Button Style */
+        .button {
+            background-color: #ffcc00;
+            color: #007acc;
+            padding: 0.8rem 1.5rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 1.1rem;
+            display: inline-block;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #ffb600;
+            transform: scale(1.05);
         }
     </style>
 </head>
-<body style="font-family: Arial, sans-serif; margin: 0; padding: 0; color: #333; background-color: #f4f4f9;">
+<body>
 
-    <!-- Header Section with Hero Image -->
-    <header style="text-align: center; padding: 3rem; background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://via.placeholder.com/1200x400'); background-size: cover; color: #fff;">
-        <h1 style="font-size: 3rem; margin: 0; animation: bounce 2s infinite;">Rushikesh Kushare</h1>
-        <p style="font-size: 1.5rem; font-weight: 300;">Full Stack Developer | Technology Enthusiast | Creative Thinker</p>
-        <a href="#contact" style="background-color: #007acc; padding: 0.8rem 1.5rem; color: white; border-radius: 5px; text-decoration: none; font-size: 1.1rem; margin-top: 1rem; display: inline-block;">Contact Me</a>
+    <!-- Header Section -->
+    <header>
+        <h1>Rushikesh Kushare</h1>
+        <p style="font-size: 1.2rem;">Full Stack Developer | Technology Enthusiast | Creative Thinker</p>
+        <a href="#contact" class="button">Contact Me</a>
     </header>
 
-    <!-- About Me Section with Icon -->
-    <section style="padding: 2rem; text-align: center;">
-        <h2 style="color: #007acc; font-size: 2rem; margin-bottom: 0.5rem;">About Me</h2>
-        <img src="https://via.placeholder.com/100" alt="Profile Picture" style="border-radius: 50%; margin: 1rem auto; width: 100px;">
-        <p style="max-width: 600px; margin: 1rem auto; line-height: 1.6;">
-            I'm Rushikesh Kushare, a dedicated Full Stack Developer who loves creating innovative solutions.
-            I enjoy learning, experimenting with new technologies, and building meaningful projects.
+    <!-- About Me Section -->
+    <section id="about">
+        <p>
+            I'm Rushikesh Kushare, a dedicated Full Stack Developer who enjoys creating innovative solutions.
+            My passion lies in developing meaningful projects that bridge technology and user experience.
+            I’m constantly exploring new tools and techniques to improve my skills.
         </p>
     </section>
 
-    <!-- Skills Section with Icons -->
-    <section style="padding: 2rem; background-color: #e0f7fa; text-align: center;">
-        <h2 style="color: #007acc; font-size: 2rem; margin-bottom: 1rem;">Skills</h2>
-        <div style="display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap; max-width: 800px; margin: auto;">
-            <div class="skill" style="padding: 1rem; background-color: #fff; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
-                <img src="https://via.placeholder.com/50" alt="HTML" style="display: block; margin: 0 auto;">
-                <p>HTML & CSS</p>
-            </div>
-            <div class="skill" style="padding: 1rem; background-color: #fff; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
-                <img src="https://via.placeholder.com/50" alt="JavaScript" style="display: block; margin: 0 auto;">
-                <p>JavaScript</p>
-            </div>
-            <div class="skill" style="padding: 1rem; background-color: #fff; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
-                <img src="https://via.placeholder.com/50" alt="Java" style="display: block; margin: 0 auto;">
-                <p>Java</p>
-            </div>
-            <div class="skill" style="padding: 1rem; background-color: #fff; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
-                <img src="https://via.placeholder.com/50" alt="Python" style="display: block; margin: 0 auto;">
-                <p>Python</p>
-            </div>
+    <!-- Skills Section -->
+    <section id="skills">
+        <h2>Skills</h2>
+        <div class="skill">HTML & CSS</div>
+        <div class="skill">JavaScript</div>
+        <div class="skill">Java</div>
+        <div class="skill">Python</div>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="project">
+            <h3>Car Rental System</h3>
+            <p>Java project with User Authentication, Car Management, and Payment modules for a streamlined rental experience.</p>
+        </div>
+        <div class="project">
+            <h3>Movie Booking System</h3>
+            <p>Comprehensive booking platform with user login, ticket booking, and snack selection for a seamless experience.</p>
+        </div>
+        <div class="project">
+            <h3>Portfolio Website</h3>
+            <p>Personal website showcasing my skills, projects, and achievements with clean design and interactive features.</p>
         </div>
     </section>
 
-    <!-- Projects Section with Cards -->
-    <section style="padding: 2rem; text-align: center;">
-        <h2 style="color: #007acc; font-size: 2rem; margin-bottom: 1rem;">Projects</h2>
-        <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 1.5rem;">
-            <div class="project" style="width: 300px; padding: 1rem; background-color: #fff; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
-                <h3>Car Rental System</h3>
-                <p>Java project with User Authentication, Car Management, and Payment modules for a streamlined rental experience.</p>
-            </div>
-            <div class="project" style="width: 300px; padding: 1rem; background-color: #fff; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
-                <h3>Movie Booking System</h3>
-                <p>Comprehensive booking platform with user login, ticket booking, and snack selection for a seamless experience.</p>
-            </div>
-            <div class="project" style="width: 300px; padding: 1rem; background-color: #fff; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
-                <h3>Portfolio Website</h3>
-                <p>Personal website showcasing my skills, projects, and achievements with clean design and interactive features.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" style="padding: 2rem; background-color: #007acc; color: #fff; text-align: center;">
-        <h2 style="font-size: 2rem;">Contact Me</h2>
+    <section id="contact">
+        <h2>Contact Me</h2>
         <p>Feel free to reach out via email or connect with me on social media!</p>
-        <p>Email: <a href="mailto:rushikesh@example.com" style="color: #fff; text-decoration: underline;">rushikesh@example.com</a></p>
-        <p>LinkedIn: <a href="#" style="color: #fff; text-decoration: underline;">linkedin.com/in/rushikeshkushare</a></p>
+        <p>Email: <a href="mailto:rushikushare99@gmail.com">rushikushare99@gmail.com</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/rushikesh-kushare-781375312?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"> linkedin.com/in/rushikeshkushare</a></p>
     </section>
 
     <!-- Footer -->
