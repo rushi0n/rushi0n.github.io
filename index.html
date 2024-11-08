@@ -1,214 +1,415 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rushikesh Kushare - Portfolio</title>
-    
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@300&display=swap" rel="stylesheet">
-    
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+
+    <title>Rushikesh Kushare</title>
     <style>
-        /* Keyframe animations */
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Arial", sans-serif;
+      }
 
-        /* Layout and color settings */
-        body {
-            font-family: 'Roboto', sans-serif;
-            margin: 0;
-            padding: 0;
-            color: #333;
-            background-color: #f4f4f9;
-            animation: fadeIn 1s ease-in-out;
-        }
+      #home h1 {
+        font-size: 3em; 
+      }
 
-        header, section, footer {
-            animation: fadeIn 1.5s ease-in-out;
-            padding: 2rem;
-        }
+      #home p {
+        font-size: 1.5em; 
+      }
 
-        header {
-            background: linear-gradient(135deg, #007acc, #005fa3);
-            color: #fff;
-            text-align: left;
-            padding: 4rem 2rem;
-        }
+     
+      #about h2 {
+        font-size: 2.5em;
+      }
 
-        h1 {
-            font-size: 3rem;
-            margin-bottom: 0.5rem;
-            font-family: 'Poppins', sans-serif;
-        }
+      #about p {
+        font-size: 1.2em;
+      }
 
-        h2 {
-            color: #007acc;
-            font-size: 2rem;
-            margin-bottom: 1rem;
-            font-family: 'Poppins', sans-serif;
-        }
+      
+      #projects h2 {
+        font-size: 2.5em;
+      }
 
-        /* About Me Section */
-        #about {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 2rem;
-            background: #e0f4fc;
-        }
+      .project h3 {
+        font-size: 1.8em;
+      }
 
-        #about img {
-            width: 120px;
-            border-radius: 50%;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-            transition: transform 0.3s ease;
+      
+      @media (max-width: 768px) {
+        #home h1 {
+          font-size: 2.5em;
         }
-
-        #about img:hover {
-            transform: scale(1.1);
+        #home p {
+          font-size: 1.2em;
         }
-
+        #about h2 {
+          font-size: 2.2em;
+        }
         #about p {
-            max-width: 600px;
-            line-height: 1.6;
+          font-size: 1.1em;
         }
-
-        /* Skills Section */
-        #skills {
-            background: #f7fafc;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 1.5rem;
-            padding-top: 1rem;
+        #projects h2 {
+          font-size: 2.2em;
         }
-
-        .skill {
-            padding: 1rem;
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            width: 150px;
-            text-align: center;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        .project h3 {
+          font-size: 1.5em;
         }
+      }
 
-        .skill:hover {
-            transform: scale(1.05);
-            box-shadow: 0 6px 12px rgba(0,0,0,0.2);
-            color: #007acc;
+      body {
+        background-color: #f4f4f4;
+        color: #333;
+      }
+
+     
+      #home {
+        height: 100vh;
+        background: linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0.6),
+            rgba(0, 0, 0, 0.3)
+          ),
+          url("your-image.jpg") no-repeat center center fixed;
+        background-size: cover;
+        color: white;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        animation: fadeIn 2s ease-out, moveBackground 20s infinite linear;
+      }
+
+      #home h1 {
+        font-size: 3.5em;
+        font-weight: bold;
+        animation: slideIn 1.5s ease-out;
+        font-family: "Georgia", serif;
+      }
+
+      #home p {
+        font-size: 1.5em;
+        margin-top: 10px;
+        font-family: "Helvetica", sans-serif;
+      }
+
+      #home button {
+        padding: 12px 30px;
+        font-size: 1.2em;
+        background-color: #28a745;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 20px;
+        transition: background-color 0.3s;
+      }
+
+      #home button:hover {
+        background-color: #218838;
+      }
+
+     
+      #about {
+        padding: 60px 20px;
+        background-color: #fff;
+        text-align: center;
+      }
+
+      #about h2 {
+        font-size: 2.5em;
+        color: #333;
+        margin-bottom: 20px;
+      }
+
+      #about p {
+        font-size: 1.2em;
+        color: #555;
+        max-width: 800px;
+        margin: 0 auto;
+        line-height: 1.6;
+      }
+
+     
+      #projects {
+        padding: 60px 20px;
+        background-color: #fff;
+      }
+
+      #projects h2 {
+        text-align: center;
+        font-size: 2.5em;
+        color: #333;
+        margin-bottom: 40px;
+      }
+
+      .projects-container {
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+        flex-wrap: wrap;
+      }
+
+      .project {
+        background: linear-gradient(145deg, #f6f7f8, #e9eff1);
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+        flex: 1 1 300px;
+        transition: transform 0.3s ease-in-out;
+        text-align: center;
+      }
+
+      .project:hover {
+        transform: translateY(-10px);
+      }
+
+      .project h3 {
+        font-size: 2em;
+        margin-bottom: 20px;
+        color: #333;
+      }
+
+      
+      .contact-links {
+        text-align: center;
+        margin-top: 20px;
+      }
+
+      .contact-links a {
+        margin: 0 20px;
+        font-size: 3em; 
+        color: #333;
+        transition: color 0.3s ease;
+      }
+
+      .contact-links a:hover {
+        color: #28a745;
+      }
+
+      .project p {
+        font-size: 1.2em;
+        color: #555;
+      }
+
+      .project button {
+        margin-top: 20px;
+        padding: 12px 25px;
+        background-color: #28a745;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      .project button:hover {
+        background-color: #218838;
+      }
+
+      
+      #contact {
+        padding: 60px 20px;
+        background-color: #333;
+        color: white;
+      }
+
+      #contact h2 {
+        text-align: center;
+        font-size: 2.5em;
+        margin-bottom: 20px;
+      }
+
+      #contact p {
+        text-align: center;
+        font-size: 1.2em;
+        margin-bottom: 20px;
+      }
+
+      #contact a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 1.5em;
+        margin: 0 15px;
+      }
+
+      #contact a:hover {
+        color: #28a745;
+      }
+
+      
+      @media (max-width: 768px) {
+        #home h1 {
+          font-size: 2.5em;
         }
-
-        /* Projects Section */
-        #projects {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 1.5rem;
+        #home p {
+          font-size: 1.2em;
         }
-
+        #projects .projects-container {
+          flex-direction: column;
+          align-items: center;
+        }
         .project {
-            width: 300px;
-            padding: 1.5rem;
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            position: relative;
+          flex: 1 1 80%;
+          margin-bottom: 20px;
         }
+      }
 
-        .project:hover {
-            transform: scale(1.05);
-            box-shadow: 0 6px 12px rgba(0,0,0,0.2);
-            color: #007acc;
+      @media (max-width: 480px) {
+        #home h1 {
+          font-size: 2em;
         }
+        #home p {
+          font-size: 1em;
+        }
+        #about h2 {
+          font-size: 2em;
+        }
+        #about p {
+          font-size: 1em;
+        }
+        #projects h2 {
+          font-size: 2em;
+        }
+      }
 
-        /* Contact Section */
-        #contact {
-            background-color: #007acc;
-            color: #fff;
-            text-align: center;
+      
+      @keyframes fadeIn {
+        0% {
+          opacity: 0;
         }
+        100% {
+          opacity: 1;
+        }
+      }
 
-        #contact a {
-            color: #ffcc00;
-            text-decoration: underline;
+      @keyframes slideIn {
+        0% {
+          transform: translateY(50px);
+          opacity: 0;
         }
+        100% {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
 
-        /* Button Style */
-        .button {
-            background-color: #ffcc00;
-            color: #007acc;
-            padding: 0.8rem 1.5rem;
-            border-radius: 5px;
-            text-decoration: none;
-            font-size: 1.1rem;
-            display: inline-block;
-            transition: background-color 0.3s ease, transform 0.3s ease;
+      @keyframes moveBackground {
+        0% {
+          background-position: 0% 50%;
         }
-
-        .button:hover {
-            background-color: #ffb600;
-            transform: scale(1.05);
+        50% {
+          background-position: 100% 50%;
         }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
+    
+    <section id="home">
+      <h1>Rushikesh Kushare</h1>
+      <p>Full Stack Developer | Passionate Coder</p>
+      <button
+        onclick="document.getElementById('about').scrollIntoView({behavior: 'smooth'})"
+      >
+        Learn More
+      </button>
+    </section>
 
-    <!-- Header Section -->
-    <header>
-        <h1>Rushikesh Kushare</h1>
-        <p style="font-size: 1.2rem;">Full Stack Developer | Technology Enthusiast | Creative Thinker</p>
-        <a href="#contact" class="button">Contact Me</a>
-    </header>
-
-    <!-- About Me Section -->
+   
     <section id="about">
-        <p>
-            I'm Rushikesh Kushare, a dedicated Full Stack Developer who enjoys creating innovative solutions.
-            My passion lies in developing meaningful projects that bridge technology and user experience.
-            I’m constantly exploring new tools and techniques to improve my skills.
-        </p>
+      <h2>About Me</h2>
+      <p>
+        Hi, I am Rushikesh Kushare, a passionate Full Stack Developer. I
+        specialize in web development using modern technologies like Angular,
+        JavaScript, and CSS. I have worked on several projects that involve
+        building dynamic and responsive websites.
+      </p>
+      <p>
+        In addition to web development, I have an interest in solving problems,
+        learning new programming languages, and exploring the latest trends in
+        the tech industry.
+      </p>
     </section>
 
-    <!-- Skills Section -->
-    <section id="skills">
-        <h2>Skills</h2>
-        <div class="skill">HTML & CSS</div>
-        <div class="skill">JavaScript</div>
-        <div class="skill">Java</div>
-        <div class="skill">Python</div>
-    </section>
-
+   
     <section id="projects">
-        <h2>Projects</h2>
+      <h2>My Projects</h2>
+      <div class="projects-container">
         <div class="project">
-            <h3>Car Rental System</h3>
-            <p>Java project with User Authentication, Car Management, and Payment modules for a streamlined rental experience.</p>
+          <h3>FarmFocus</h3>
+          <p>
+            An Angular-based web application designed to help farmers determine
+            how to mix fertilizers efficiently. Includes features to add,
+            update, and manage fertilizers.
+          </p>
+          <button
+            onclick="window.location.href='#'"
+          >
+            View on GitHub
+          </button>
         </div>
         <div class="project">
-            <h3>Movie Booking System</h3>
-            <p>Comprehensive booking platform with user login, ticket booking, and snack selection for a seamless experience.</p>
+          <h3>Employees Management System</h3>
+          <p>
+            A Spring Boot application to manage employee details, track
+            performance, and streamline HR operations.
+          </p>
+          <button
+            onclick="window.location.href='#'"
+          >
+            View on GitHub
+          </button>
         </div>
         <div class="project">
-            <h3>Portfolio Website</h3>
-            <p>Personal website showcasing my skills, projects, and achievements with clean design and interactive features.</p>
+          <h3>EdUTrack</h3>
+          <p>
+            A comprehensive system for educational institutions to track
+            students, teachers, and courses. Built using Angular and backend
+            APIs.
+          </p>
+          <button
+            onclick="window.location.href='#'"
+          >
+            View on GitHub
+          </button>
         </div>
+      </div>
     </section>
 
+    
     <section id="contact">
-        <h2>Contact Me</h2>
-        <p>Feel free to reach out via email or connect with me on social media!</p>
-        <p>Email: <a href="mailto:rushikushare99@gmail.com">rushikushare99@gmail.com</a></p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/rushikesh-kushare-781375312?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"> linkedin.com/in/rushikeshkushare</a></p>
+      <h2>Contact Me</h2>
+      <p>
+        If you'd like to get in touch or collaborate on a project, feel free to
+        reach out.
+      </p>
+      <div class="contact-links">
+        <a href="mailto:rushikushare99@gmail.com"
+          ><i class="fas fa-envelope"></i
+        ></a>
+        <a href="https://www.linkedin.com/in/rushikesh-kushare-781375312/"
+          ><i class="fab fa-linkedin"></i
+        ></a>
+        <a href="https://github.com/rushi0n"
+          ><i class="fab fa-github"></i
+        ></a>
+        <a href="https://www.instagram.com/rushi_0n/"
+          ><i class="fab fa-instagram"></i
+        ></a>
+      </div>
     </section>
-
-    <!-- Footer -->
-    <footer style="text-align: center; padding: 1rem; background-color: #007acc; color: #fff;">
-        <p>&copy; 2024 Rushikesh Kushare</p>
-    </footer>
-
-</body>
+  </body>
 </html>
